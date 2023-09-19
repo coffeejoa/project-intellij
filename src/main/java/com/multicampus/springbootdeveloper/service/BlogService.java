@@ -4,10 +4,9 @@ import com.multicampus.springbootdeveloper.domain.Article;
 import com.multicampus.springbootdeveloper.dto.AddArticleRequest;
 import com.multicampus.springbootdeveloper.dto.UpdateArticleRequest;
 import com.multicampus.springbootdeveloper.repository.BlogRepository;
-//import jakarta.transaction.Transactional;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 

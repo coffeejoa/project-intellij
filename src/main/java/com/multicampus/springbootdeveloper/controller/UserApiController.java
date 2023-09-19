@@ -2,8 +2,8 @@ package com.multicampus.springbootdeveloper.controller;
 
 import com.multicampus.springbootdeveloper.dto.AddUserRequest;
 import com.multicampus.springbootdeveloper.service.UserService;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
@@ -27,8 +27,8 @@ public class UserApiController {
 
     @GetMapping("/logout")
     public String logout(HttpServletRequest request , HttpServletResponse response){
-        new SecurityContextLogoutHandler().logout(request,response, SecurityContextHolder.getContext().getAuthentication());
-        return  "redirect:/login";
+         new SecurityContextLogoutHandler().logout(request,response, SecurityContextHolder.getContext().getAuthentication());
+         return  "redirect:/login";
     }
 
 }

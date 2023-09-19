@@ -1,7 +1,7 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.7.10'
-    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'org.springframework.boot' version '3.0.2'
+    id 'io.spring.dependency-management' version '1.1.0'
 }
 
 group 'com.multicampus'
@@ -17,18 +17,18 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-security'
-    implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6:3.1.1.RELEASE")   //프로젝트 환경구축
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
     testImplementation 'org.springframework.security:spring-security-test'
+    //JWT라이브러리 의존성 주입
+    implementation 'io.jsonwebtoken:jjwt:0.9.1'
+    //XML문서와 Java 객체 사이 매핑 라이브러리
+    implementation 'javax.xml.bind:jaxb-api:2.3.1'
     // 스프링 데이터 JPA
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    testImplementation 'org.projectlombok:lombok:1.18.22'
     runtimeOnly 'com.h2database:h2' //인메모리 데이터베이스
     compileOnly 'org.projectlombok:lombok'  //롬복
     annotationProcessor 'org.projectlombok:lombok'
-
-    //jmt 라이브러리 의존성주입
-    implementation 'io.jsonwebtoken:jjwt:0.9.1'
-    //xml 문서와 java 사이 맵핑 라이브러리
-    implementation 'javax.xml.bind:jaxb-api:2.3.1'
 }
 
 test {

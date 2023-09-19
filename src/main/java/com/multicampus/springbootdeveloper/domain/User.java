@@ -1,15 +1,14 @@
 package com.multicampus.springbootdeveloper.domain;
 
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.*;
 import java.util.Collection;
 import java.util.List;
 
@@ -49,8 +48,8 @@ public class User implements UserDetails{   //UserDetails 를 상속받아 인�
 
     @Override
     public boolean isAccountNonExpired() {   //계정 만료 여부 반환
-        //만료되었는지 확인하는 로직
-        return true;
+         //만료되었는지 확인하는 로직
+         return true;
     }
 
     @Override

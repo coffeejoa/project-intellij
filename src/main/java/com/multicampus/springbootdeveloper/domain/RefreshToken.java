@@ -1,14 +1,9 @@
 package com.multicampus.springbootdeveloper.domain;
 
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter

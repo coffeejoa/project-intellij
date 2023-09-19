@@ -24,7 +24,7 @@ public class WebSecurityConfig {
     public WebSecurityCustomizer configure() {
         return (web) -> web.ignoring()
                 .requestMatchers(toH2Console())
-                .antMatchers("/static/**");
+                .requestMatchers("/static/**");
     }
 
   //requestMatchers : 특정 요청과 일치하는 url에 대해 액세스 설정함
@@ -42,7 +42,7 @@ public class WebSecurityConfig {
       public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
           return http
                   .authorizeRequests()
-                  .antMatchers("/login", "/signup", "/user").permitAll()
+                  .requestMatchers("/login", "/signup", "/user").permitAll()
                   .anyRequest().authenticated()
                   .and()
                   .formLogin()
